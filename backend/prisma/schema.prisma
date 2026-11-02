@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model DocumentChunk {
+  id String @id @default(uuid()) @db.Uuid
+  documentId String @map("document_id")
+  chunkIndex Int @map("chunk_index")
+  content String
+  pageNumber Int? @map("page_number")
+  metadata Json @db.JsonB
+  embedding Unsupported("vector(768)")
+  embeddingModel String @map("embedding_model")
+  startOffset Int @map("start_offset")
+  endOffset Int @map("end_offset")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  @@unique([documentId, chunkIndex])
+  @@index([metadata], type: Gin)
+  @@map("document_chunks")
+}
