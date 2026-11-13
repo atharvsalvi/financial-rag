@@ -9,6 +9,9 @@ export interface Configuration {
   redisUrl: string;
   ollamaBaseUrl: string;
   embeddingModel: string;
+  chatModel: string;
+  tavilyApiKey?: string;
+  chatTimeoutMs: number;
   embeddingDimensions: number;
   embeddingBatchSize: number;
   ollamaTimeoutMs: number;
@@ -49,6 +52,12 @@ export function validateEnvironment(env: NodeJS.ProcessEnv): Configuration {
       '',
     ),
     embeddingModel: required('OLLAMA_EMBEDDING_MODEL'),
+    tavilyApiKey: env.TAVILY_API_KEY?.trim() || undefined,
+    chatModel:
+      env.OLLAMA_CHAT_MODEL === undefined
+        ? 'qwen2.5:1.5b'
+        : required('OLLAMA_CHAT_MODEL'),
+    chatTimeoutMs: integer('OLLAMA_CHAT_TIMEOUT_MS', 120000),
     embeddingDimensions: integer('EMBEDDING_DIMENSIONS'),
     embeddingBatchSize: integer('EMBEDDING_BATCH_SIZE', 16),
     ollamaTimeoutMs: integer('OLLAMA_TIMEOUT_MS', 30000),

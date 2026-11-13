@@ -3,3 +3,5 @@ dist
 coverage
 package-lock.json
 .npm-cache
+eval/cache
+eval/results

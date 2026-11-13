@@ -3,3 +3,5 @@ dist
 coverage
 .env
 .npm-cache
+eval/cache
+eval/results

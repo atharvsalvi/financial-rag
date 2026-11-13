@@ -1,6 +1,6 @@
 # FinancialResearch AI
 
-A financial research RAG foundation in TypeScript/NestJS. This implementation covers **Phase 0: backend foundation** and **Phase 2: chunking and embeddings**. It accepts already-extracted text; PDF ingestion, retrieval, LLM answers and external search are future phases. It is not an autonomous agent or trading system.
+A financial research backend in TypeScript and NestJS. Follow this guide to start the services, then [upload a PDF](phase-1.md).
 
 Stack: Node.js 22 LTS, NestJS 11, strict TypeScript, Prisma 6, PostgreSQL 17 with pgvector, Ollama embeddings, Redis infrastructure, Jest, Docker Compose and GitHub Actions. See [architecture](architecture.md), [Phase 0](phase-0.md), and [Phase 2](phase-2.md).
 
@@ -66,7 +66,7 @@ Failure returns HTTP 503 with dependency status inside the global error envelope
 
 ## Ollama and live sample processing
 
-The example configuration is `OLLAMA_EMBEDDING_MODEL=nomic-embed-text` and `EMBEDDING_DIMENSIONS=768`. **No live Ollama model was tested here.** Ordinary tests use mocks.
+The example configuration is `OLLAMA_EMBEDDING_MODEL=nomic-embed-text` and `EMBEDDING_DIMENSIONS=768`. The Phase 1 integration test exercised this model with a PDF upload. Ordinary tests use mocks.
 
 ```powershell
 # In a separate terminal, if Ollama is not already running:
@@ -78,7 +78,7 @@ cd C:\personal-main\RAG\backend
 npm run embed:sample
 ```
 
-The CLI uses the configured model, processes a page-aware financial fixture and persists native vectors under document ID `sample-annual-report`. Repeating it reuses unchanged content embeddings. It requires the migrated PostgreSQL database and backend/.env. It reports success only after persistence succeeds. Read results through the injected `CHUNK_REPOSITORY.findByDocumentId('sample-annual-report')` service or inspect the table with psql. No public processing endpoint or PDF extraction is included.
+The CLI processes a text fixture and persists vectors under document ID `sample-annual-report`. To process a file, send a multipart upload to `POST /api/v1/documents/ingest`. Both paths require a migrated PostgreSQL database and configured Ollama service.
 
 ## Verification
 
@@ -123,5 +123,5 @@ compose.yaml               PostgreSQL, Redis, migrations and backend
 
 The document_chunks table stores UUID ID, external document ID, chunk index, text, nullable page number, JSONB metadata, native embedding vector, embedding model, normalized-text offsets and creation time. Uniqueness is enforced on document/index and metadata has a GIN index. A vector search index is deferred until retrieval metric and dataset evaluation.
 
-Next step: **Phase 1 document ingestion**, producing the existing ExtractedDocument contract. Table-aware extraction, durable jobs, retrieval and RAG generation remain outside this implementation.
+After uploading a report, use the [search example](../README.md#search-an-uploaded-report) to retrieve passages from its pages.
 

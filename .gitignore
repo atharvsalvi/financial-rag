@@ -6,3 +6,5 @@ coverage/
 !.env.example
 *.log
 .npm-cache/
+backend/eval/cache/
+backend/eval/results/

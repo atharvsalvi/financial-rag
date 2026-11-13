@@ -17,9 +17,12 @@
     "prisma:generate": "prisma generate",
     "migrate:deploy": "prisma migrate deploy",
     "migrate:dev": "prisma migrate dev",
-    "embed:sample": "ts-node scripts/embed-sample.ts"
+    "embed:sample": "ts-node scripts/embed-sample.ts",
+    "eval": "ts-node eval/run.ts",
+    "eval:brochure": "ts-node eval/brochure.ts"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
@@ -28,7 +31,9 @@
     "class-validator": "^0.14.2",
     "dotenv": "^16.6.1",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2"
+    "rxjs": "^7.8.2",
+    "unpdf": "^1.9.1",
+    "zod": "^4.6.7"
   },
   "overrides": {
     "multer": "^2.5.0",

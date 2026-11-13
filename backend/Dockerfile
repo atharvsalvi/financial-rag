@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends openssl && rm -
 WORKDIR /app
 COPY --from=production-dependencies --chown=node:node /app/node_modules ./node_modules
 COPY --from=build --chown=node:node /app/dist ./dist
+COPY --from=build --chown=node:node /app/public ./public
+COPY --from=build --chown=node:node /app/eval/baseline.json ./eval/baseline.json
 USER node
 EXPOSE 3000
 CMD ["node", "dist/main.js"]

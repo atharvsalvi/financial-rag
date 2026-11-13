@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" data-type="software">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Financial report research, source passages and evaluation results."
+    />
+    <meta name="page-type" content="software" />
+    <meta name="site-kind" content="software" />
+    <title>FinancialResearch AI | Research workspace</title>
+    <link rel="stylesheet" href="/dashboard.css" />
+    <script src="/dashboard.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to workspace</a>
+    <header>
+      <div class="brand">
+        <span class="logo" aria-hidden="true">▥</span>FinancialResearch
+        <small>AI</small>
+      </div>
+      <span id="health" role="status">Checking services…</span>
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div class="eyebrow">Financial intelligence</div>
+        <h1>Research workspace</h1>
+        <p>Explore financial reports and trace answers to their sources.</p>
+      </div>
+      <nav aria-label="Workspace">
+        <a href="#overview">Overview</a><a href="#research">Research</a
+        ><a href="#conversations">Conversations</a
+        ><a href="#evaluation">Evaluation</a>
+      </nav>
+      <section id="overview">
+        <div class="columns">
+          <article>
+            <div class="eyebrow">Workspace inventory</div>
+            <h2>Report library</h2>
+            <div class="metrics">
+              <div><b id="nr">—</b><span>Reports</span></div>
+              <div><b id="np">—</b><span>Indexed pages</span></div>
+              <div><b id="nc">—</b><span>Passages</span></div>
+            </div>
+            <div id="reports">Loading reports…</div>
+          </article>
+          <article class="upload">
+            <div class="eyebrow">Document ingestion</div>
+            <h2>Upload a report</h2>
+            <p>Select a text-based financial PDF, up to 20 MB.</p>
+            <form id="upload">
+              <label for="pdf">Report file</label
+              ><input
+                type="file"
+                id="pdf"
+                name="file"
+                accept=".pdf,application/pdf"
+                required
+              /><button>Index report <span>↑</span></button
+              ><output id="uploadStatus" aria-live="polite"></output>
+            </form>
+          </article>
+        </div>
+        <article class="baseline">
+          <div>
+            <div class="eyebrow">Saved evaluation</div>
+            <h2>Benchmark snapshot</h2>
+            <p id="benchInfo">Loading baseline…</p>
+          </div>
+          <div id="bars"></div>
+          <a href="#evaluation">View evaluation →</a>
+        </article>
+      </section>
+      <section id="research" hidden>
+        <article>
+          <h2>Research a question</h2>
+          <form id="ask">
+            <label for="mode">Research mode</label
+            ><select id="mode">
+              <option value="answers">Answer from reports</option>
+              <option value="retrieval/search">Search passages</option>
+              <option value="answers/web">
+                Answer from web sources
+              </option></select
+            ><label for="scope">Report</label
+            ><select id="scope"></select
+            ><label for="question">Question</label
+            ><textarea
+              required
+              maxlength="4000"
+              id="question"
+              placeholder="What was operating cash flow?"
+            ></textarea
+            ><button>Run research →</button>
+          </form>
+          <div id="result" aria-live="polite"></div>
+        </article>
+      </section>
+      <section id="conversations" hidden>
+        <div class="columns">
+          <article>
+            <h2>Saved conversations</h2>
+            <div id="threads"></div>
+          </article>
+          <article>
+            <h2>Report conversation</h2>
+            <form id="newChat">
+              <label for="chatScope">Start with a report</label
+              ><select id="chatScope"></select
+              ><button>Start conversation</button>
+            </form>
+            <div id="history" aria-live="polite"></div>
+            <form id="reply" hidden>
+              <label for="follow">Follow-up question</label
+              ><textarea id="follow" required maxlength="4000"></textarea
+              ><button>Send question →</button>
+            </form>
+            <output id="chatStatus" aria-live="polite"></output>
+          </article>
+        </div>
+      </section>
+      <section id="evaluation" hidden>
+        <article>
+          <div class="eyebrow">Phase 7</div>
+          <h2>Evaluation results</h2>
+          <p id="models"></p>
+          <div id="cases">Loading baseline…</div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

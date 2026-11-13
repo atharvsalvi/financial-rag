@@ -1,0 +1,978 @@
+{
+  "date": "2026-11-13T12:22:49.244Z",
+  "models": {
+    "embedding": "nomic-embed-text",
+    "chat": "qwen2.5:1.5b"
+  },
+  "chunkSize": 1000,
+  "overlap": 150,
+  "reports": [
+    {
+      "year": 2022,
+      "hash": "52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+      "url": "https://www.berkshirehathaway.com/2022ar/2022ar.pdf"
+    },
+    {
+      "year": 2023,
+      "hash": "2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+      "url": "https://www.berkshirehathaway.com/2023ar/2023ar.pdf"
+    }
+  ],
+  "summary": {
+    "cases": 18,
+    "numeric": 16,
+    "top5": 15,
+    "correct": 0,
+    "supported": 0,
+    "absent": 2,
+    "abstained": 0,
+    "passed": 0,
+    "errors": 0
+  },
+  "rows": [
+    {
+      "id": "float23",
+      "question": "How large was Berkshire Hathaway’s insurance float at December 31, 2023?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [30, 66],
+        "amountMillions": 169000
+      },
+      "rank": 0,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 125
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 94
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 145
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 135
+        }
+      ],
+      "answer": {
+        "answer": "ASSETS [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "quote": "ASSETS",
+            "filename": "Berkshire-2023.pdf",
+            "chunkIndex": 537,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "pageNumber": 94
+          }
+        ]
+      }
+    },
+    {
+      "id": "float22-follow",
+      "question": "And how large was it at the end of the previous year?",
+      "expected": {
+        "report": 2023,
+        "year": 2022,
+        "pages": [66],
+        "alternate": {
+          "report": 2022,
+          "pages": [22, 57]
+        },
+        "amountMillions": 164000
+      },
+      "rank": 5,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 94
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 125
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 50
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 57
+        }
+      ],
+      "answer": {
+        "answer": "(dollars in millions) [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "quote": "(dollars in millions)",
+            "filename": "Berkshire-2022.pdf",
+            "chunkIndex": 505,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "pageNumber": 86
+          }
+        ]
+      }
+    },
+    {
+      "id": "cash22",
+      "question": "In the original FY2022 consolidated statement, what were Berkshire’s net cash flows from operating activities in 2022?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [90],
+        "amountMillions": 37224
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 90
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 133
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 73
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 107
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 73
+        }
+      ],
+      "answer": {
+        "answer": "Net cash flows from operating activities   37,224   39,421   39,773 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 517,
+            "pageNumber": 90,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "Net cash flows from operating activities   37,224   39,421   39,773"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cash23",
+      "question": "What were consolidated net cash flows from operating activities in FY2023?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [98],
+        "amountMillions": 49196
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 98
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 98
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 115
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 142
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 139
+        }
+      ],
+      "answer": {
+        "answer": "Net cash flows from operating activities   49,196   37,350   39,427 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "quote": "Net cash flows from operating activities   49,196   37,350   39,427",
+            "filename": "Berkshire-2023.pdf",
+            "chunkIndex": 551,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "pageNumber": 98
+          }
+        ]
+      }
+    },
+    {
+      "id": "cash22-comparative",
+      "question": "What comparative amount does that same statement give for 2022?",
+      "expected": {
+        "report": 2023,
+        "year": 2022,
+        "pages": [98],
+        "amountMillions": 37350
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 98
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 139
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 94
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 145
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 115
+        }
+      ],
+      "answer": {
+        "answer": "Changes in operating assets and liabilities: [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "quote": "Changes in operating assets and liabilities:",
+            "filename": "Berkshire-2023.pdf",
+            "chunkIndex": 551,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "pageNumber": 98
+          }
+        ]
+      }
+    },
+    {
+      "id": "bhe22",
+      "question": "What net earnings were attributable to BHE in FY2022, in millions of dollars?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [60, 61],
+        "alternate": {
+          "report": 2023,
+          "pages": [69]
+        },
+        "amountMillions": 4352
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 60
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        }
+      ],
+      "answer": {
+        "answer": "Net earnings attributable to BHE   2,610   4,352   4,047 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 391,
+            "pageNumber": 69,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "Net earnings attributable to BHE   2,610   4,352   4,047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bhe23",
+      "question": "What net earnings were attributable to BHE in FY2023, in millions of dollars?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [69],
+        "amountMillions": 2610
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 60
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 60
+        }
+      ],
+      "answer": {
+        "answer": "Net earnings attributable to BHE   2,610   4,352   4,047 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 391,
+            "pageNumber": 69,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "Net earnings attributable to BHE   2,610   4,352   4,047"
+          }
+        ]
+      }
+    },
+    {
+      "id": "deferred22",
+      "question": "At year-end 2022, how much were unamortized deferred charges related to retroactive reinsurance contracts?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [55, 78, 115],
+        "alternate": {
+          "report": 2023,
+          "pages": [123]
+        },
+        "amountMillions": 9900
+      },
+      "rank": 5,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 65
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 87
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 77
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 123
+        }
+      ],
+      "answer": {
+        "answer": "with some lasting several decades. [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 686,
+            "pageNumber": 123,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "with some lasting several decades."
+          }
+        ]
+      }
+    },
+    {
+      "id": "deferred23",
+      "question": "At year-end 2023, how much were unamortized deferred charges on retroactive reinsurance contracts?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [65, 86, 123],
+        "amountMillions": 9500
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 65
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 87
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 123
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 115
+        }
+      ],
+      "answer": {
+        "answer": "December 31, 2023, a decline of $375 million since December 31, 2022. [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 368,
+            "pageNumber": 65,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "December 31, 2023, a decline of $375 million since December 31, 2022."
+          }
+        ]
+      }
+    },
+    {
+      "id": "losses22",
+      "question": "How large were gross unpaid losses assumed under retroactive reinsurance contracts at December 31, 2022?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [55, 78],
+        "amountMillions": 35400
+      },
+      "rank": 4,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 77
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 115
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 78
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 123
+        }
+      ],
+      "answer": {
+        "answer": "Our retroactive reinsurance contracts cover loss events occurring before the contract inception dates. [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 461,
+            "pageNumber": 78,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "Our retroactive reinsurance contracts cover loss events occurring before the contract inception dates."
+          }
+        ]
+      }
+    },
+    {
+      "id": "losses23",
+      "question": "How large were unpaid losses assumed under retroactive reinsurance contracts at December 31, 2023?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [65, 86],
+        "amountMillions": 34600
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 77
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 115
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 123
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 78
+        }
+      ],
+      "answer": {
+        "answer": "2023   2022   2021 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "quote": "2023   2022   2021",
+            "filename": "Berkshire-2023.pdf",
+            "chunkIndex": 684,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "pageNumber": 123
+          }
+        ]
+      }
+    },
+    {
+      "id": "losses22-follow",
+      "question": "What was the corresponding amount at the end of 2022?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [55, 78],
+        "amountMillions": 35400
+      },
+      "rank": 5,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 77
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 123
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 115
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 78
+        }
+      ],
+      "answer": {
+        "answer": "Total   1,109   86   (821) [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "quote": "Total   1,109   86   (821)",
+            "filename": "Berkshire-2023.pdf",
+            "chunkIndex": 684,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "pageNumber": 123
+          }
+        ]
+      }
+    },
+    {
+      "id": "debt22",
+      "question": "How much did BHE and its subsidiaries have in outstanding borrowings at the end of 2022?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [74],
+        "amountMillions": 52800
+      },
+      "rank": 5,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 117
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 117
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 73
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 116
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 74
+        }
+      ],
+      "answer": {
+        "answer": "approximately $9.1 billion related to BHE and its subsidiaries. [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 661,
+            "pageNumber": 117,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "approximately $9.1 billion related to BHE and its subsidiaries."
+          }
+        ]
+      }
+    },
+    {
+      "id": "asbestos23",
+      "question": "What was Berkshire’s estimated liability for asbestos and environmental exposures at December 31, 2023?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [87, 123],
+        "amountMillions": 12200
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 123
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 87
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 86
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 117
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 26
+        }
+      ],
+      "answer": {
+        "answer": "rior accident years of property and casualty [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 658,
+            "pageNumber": 117,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "rior accident years of property and casualty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy22",
+      "question": "How much energy operating revenue did BHE report for FY2022?",
+      "expected": {
+        "report": 2022,
+        "year": 2022,
+        "pages": [60],
+        "amountMillions": 21069
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 60
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 61
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 26
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 122
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 96
+        }
+      ],
+      "answer": {
+        "answer": "BHE reported $21,069 million in energy operating revenue for FY2022 [1] BHE reported $26,393 million in total revenue for FY2022 [2] BHE reported $4,352 million in net earnings attributable to BHE for FY2022 [3]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 354,
+            "pageNumber": 60,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "Energy operating revenue   $   21,069   $   18,935   $   15,556"
+          },
+          {
+            "id": 2,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 354,
+            "pageNumber": 60,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "Total revenue   26,393   25,096   21,100"
+          },
+          {
+            "id": 3,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 354,
+            "pageNumber": 60,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "Net earnings attributable to BHE   4,352   4,047   3,473"
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy23",
+      "question": "How much energy operating revenue did BHE report for FY2023?",
+      "expected": {
+        "report": 2023,
+        "year": 2023,
+        "pages": [69],
+        "amountMillions": 21280
+      },
+      "rank": 1,
+      "correct": false,
+      "supported": false,
+      "abstained": null,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 69
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 132
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 13
+        }
+      ],
+      "answer": {
+        "answer": "Energy operating revenue   $   21,280   $   21,069   $   18,935 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 391,
+            "pageNumber": 69,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "Energy operating revenue   $   21,280   $   21,069   $   18,935"
+          }
+        ]
+      }
+    },
+    {
+      "id": "absent25",
+      "question": "What actual consolidated net income did Berkshire record for the completed fiscal year 2025?",
+      "expected": {
+        "report": 2023,
+        "year": 2025,
+        "pages": []
+      },
+      "rank": null,
+      "correct": null,
+      "supported": null,
+      "abstained": false,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 6
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 125
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 73
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 89
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 97
+        }
+      ],
+      "answer": {
+        "answer": "Reclassifications into net earnings   435   (3)   93   (38)   487 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+            "chunkIndex": 702,
+            "pageNumber": 125,
+            "filename": "Berkshire-2022.pdf",
+            "quote": "Reclassifications into net earnings   435   (3)   93   (38)   487"
+          }
+        ]
+      }
+    },
+    {
+      "id": "absent26",
+      "question": "What was BNSF’s actual operating revenue for the completed fiscal year 2026?",
+      "expected": {
+        "report": 2022,
+        "year": 2026,
+        "pages": []
+      },
+      "rank": null,
+      "correct": null,
+      "supported": null,
+      "abstained": false,
+      "pass": false,
+      "retrieved": [
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 58
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 67
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 30
+        },
+        {
+          "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+          "page": 67
+        },
+        {
+          "documentId": "pdf-52138f7464c477b10bf5068b8a211f059f8b90ba6b9c4d16c8ee434193a70be4",
+          "page": 22
+        }
+      ],
+      "answer": {
+        "answer": "Railroad operating earnings   7,415   8,603   8,811 [1]",
+        "status": "answered",
+        "citations": [
+          {
+            "id": 1,
+            "documentId": "pdf-2132b85f9c472a6f0b141551adb08d93f88db28e6a3794e7e2b13ca3f8a57b5b",
+            "chunkIndex": 379,
+            "pageNumber": 67,
+            "filename": "Berkshire-2023.pdf",
+            "quote": "Railroad operating earnings   7,415   8,603   8,811"
+          }
+        ]
+      }
+    }
+  ]
+}

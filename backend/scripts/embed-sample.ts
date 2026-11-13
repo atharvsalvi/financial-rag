@@ -29,4 +29,4 @@ async function run(): Promise<void> {
 void run().catch(function failed(error: unknown) {
   console.error(error);
   process.exitCode = 1;
-}); 
+});
