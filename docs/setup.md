@@ -4,11 +4,11 @@ A financial research backend in TypeScript and NestJS. Follow this guide to star
 
 Stack: Node.js 22 LTS, NestJS 11, strict TypeScript, Prisma 6, PostgreSQL 17 with pgvector, Ollama embeddings, Redis infrastructure, Jest, Docker Compose and GitHub Actions. See [architecture](architecture.md), [Phase 0](phase-0.md), and [Phase 2](phase-2.md).
 
-See [verification results and outstanding checks](verification.md), including unresolved dependency advisories and the live infrastructure checks that could not run here.
+See [verification results and outstanding checks](verification.md), for dated test runs and known limitations.
 
 ## Setup
 
-Prerequisites: Node.js 22.12+ within the 22 LTS line, npm, Docker Engine/Desktop with Compose v2, and Ollama for live embeddings. The implementation machine has Node 22.16.0 but no Docker or Ollama executables.
+Prerequisites: Node.js 22.12+ within the 22 LTS line, npm, Docker Engine/Desktop with Compose v2, and Ollama for live embeddings.
 
 Run from the repository root in PowerShell:
 
@@ -35,7 +35,7 @@ cd backend
 npm run migrate:dev -- --name describe_change
 ```
 
-Use `migrate:deploy` for existing migrations and deployments. Migration 001 enables pgvector and creates document_chunks; migration 002 adds normalized-text offsets. The vector column is 768-dimensional. Changing only EMBEDDING_DIMENSIONS does not migrate the schema: startup intentionally rejects a mismatch.
+Use `migrate:deploy` for existing migrations and deployments. Migration 001 enables pgvector and creates document_chunks; migration 002 adds normalized-text offsets. The conversation migration creates conversations and turns. The vector column is 768-dimensional. Changing only EMBEDDING_DIMENSIONS does not migrate the schema: startup intentionally rejects a mismatch.
 
 ## Docker
 
@@ -74,7 +74,8 @@ ollama serve
 # In another terminal:
 ollama pull nomic-embed-text
 Invoke-RestMethod -Method Post -Uri http://localhost:11434/api/embed -ContentType 'application/json' -Body '{"model":"nomic-embed-text","input":["FY2026 revenue increased 15%."],"truncate":false}'
-cd C:\personal-main\RAG\backend
+# From the repository root:
+cd backend
 npm run embed:sample
 ```
 
@@ -121,7 +122,7 @@ compose.yaml               PostgreSQL, Redis, migrations and backend
 .env.example
 ```
 
-The document_chunks table stores UUID ID, external document ID, chunk index, text, nullable page number, JSONB metadata, native embedding vector, embedding model, normalized-text offsets and creation time. Uniqueness is enforced on document/index and metadata has a GIN index. A vector search index is deferred until retrieval metric and dataset evaluation.
+The document_chunks table stores UUID ID, external document ID, chunk index, text, nullable page number, JSONB metadata, native embedding vector, embedding model, normalized-text offsets and creation time. Uniqueness is enforced on document/index and metadata has a GIN index. Passage search uses exact cosine similarity over the stored vectors.
 
-After uploading a report, use the [search example](../README.md#search-an-uploaded-report) to retrieve passages from its pages.
+After uploading a report, use the [search example](api.md#search-an-uploaded-report) to retrieve passages from its pages.
 
